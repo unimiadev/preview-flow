@@ -90,7 +90,7 @@ export default function ProfilePage() {
     <div className="profile-page page-enter">
       <nav className="navbar">
         <div className="navbar-left">
-          <Link to="/dashboard" className="btn btn-ghost btn-icon" title="Back to Dashboard">
+          <Link to="/dashboard" className="btn btn-ghost btn-icon" title={t('nav.back_dashboard')}>
             <ArrowLeft size={18} />
           </Link>
           <Link to="/" className="navbar-brand">

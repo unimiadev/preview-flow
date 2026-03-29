@@ -8,12 +8,6 @@ import LanguageSelector from '../components/LanguageSelector';
 import logoFull from '../assets/preview-flow-logo.png';
 import './DashboardPage.css';
 
-const platformLabels: Record<string, string> = {
-  instagram: 'Instagram',
-  linkedin: 'LinkedIn',
-  twitter: 'X / Twitter',
-};
-
 const platformColors: Record<string, string> = {
   instagram: '#E1306C',
   linkedin: '#0A66C2',
@@ -24,6 +18,12 @@ export default function DashboardPage() {
   const { projects, deleteProject } = useProjects();
   const { user, isConfigured } = useAuth();
   const { t } = useLanguage();
+
+  const platformLabels: Record<string, string> = {
+    instagram: t('common.platforms.instagram'),
+    linkedin: t('common.platforms.linkedin'),
+    twitter: t('common.platforms.twitter'),
+  };
 
   return (
     <div className="dashboard page-enter">

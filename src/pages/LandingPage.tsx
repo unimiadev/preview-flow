@@ -46,16 +46,16 @@ function getFeatures(t: (k: string) => string): FeatureCardProps[] {
   ];
 }
 
-const platforms = [
-  { icon: InstagramIcon, name: 'Instagram', color: '#E1306C' },
-  { icon: LinkedInIcon, name: 'LinkedIn', color: '#0A66C2' },
-  { icon: XTwitterIcon, name: 'X / Twitter', color: '#1DA1F2' },
-];
-
 export default function LandingPage() {
   const { t } = useLanguage();
   const { user, isConfigured } = useAuth();
   const features = getFeatures(t);
+
+  const platforms = [
+    { icon: InstagramIcon, name: t('common.platforms.instagram'), color: '#E1306C' },
+    { icon: LinkedInIcon, name: t('common.platforms.linkedin'), color: '#0A66C2' },
+    { icon: XTwitterIcon, name: t('common.platforms.twitter'), color: '#1DA1F2' },
+  ];
 
   if (user) {
     return <Navigate to="/dashboard" replace />;

@@ -32,7 +32,7 @@ export default function InstagramMockup({ imageUrl, caption, brand }: InstagramM
             </div>
           </div>
           <div className="ig-user-info">
-            <span className="ig-username">{brand.username || 'username'}</span>
+            <span className="ig-username">{brand.username || t('mockups.default_username')}</span>
             <span className="ig-location">{t('mockups.instagram.location')}</span>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function InstagramMockup({ imageUrl, caption, brand }: InstagramM
       {/* Caption */}
       {caption && (
         <div className="ig-caption">
-          <span className="ig-caption-username">{brand.username || 'username'}</span>{' '}
+          <span className="ig-caption-username">{brand.username || t('mockups.default_username')}</span>{' '}
           <span className="ig-caption-text">
             {displayCaption}
             {shouldTruncate && (

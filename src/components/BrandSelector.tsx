@@ -155,8 +155,8 @@ export default function BrandSelector({ profile, onChange }: BrandSelectorProps)
             placeholder={t('profile.brands.headline_placeholder')}
           />
           <div className="brand-inline-actions">
-            <button className="btn btn-ghost btn-sm" onClick={() => setShowInlineCreate(false)}>Cancel</button>
-            <button className="btn btn-primary btn-sm" onClick={handleCreateBrand} disabled={!newName.trim()}>Create & Apply</button>
+            <button className="btn btn-ghost btn-sm" onClick={() => setShowInlineCreate(false)}>{t('common.cancel')}</button>
+            <button className="btn btn-primary btn-sm" onClick={handleCreateBrand} disabled={!newName.trim()}>{t('editor.brand.create_apply')}</button>
           </div>
         </div>
       )}
@@ -170,7 +170,7 @@ export default function BrandSelector({ profile, onChange }: BrandSelectorProps)
               className="brand-manual-input"
               value={profile.displayName}
               onChange={(e) => handleManualChange('displayName', e.target.value)}
-              placeholder="Display name"
+              placeholder={t('editor.brand.display_name_placeholder')}
             />
             <div className="brand-manual-username">
               <span className="brand-manual-at">@</span>
@@ -179,7 +179,7 @@ export default function BrandSelector({ profile, onChange }: BrandSelectorProps)
                 className="brand-manual-input brand-manual-uname"
                 value={profile.username}
                 onChange={(e) => handleManualChange('username', e.target.value.replace(/\s/g, ''))}
-                placeholder="username"
+                placeholder={t('profile.brands.username_placeholder')}
               />
             </div>
           </div>
@@ -188,7 +188,7 @@ export default function BrandSelector({ profile, onChange }: BrandSelectorProps)
             className="brand-manual-input"
             value={profile.headline}
             onChange={(e) => handleManualChange('headline', e.target.value)}
-            placeholder="Headline / tagline"
+            placeholder={t('editor.brand.headline_tagline_placeholder')}
           />
         </div>
       )}

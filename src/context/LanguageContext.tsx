@@ -85,6 +85,9 @@ const en: Translations = {
   'editor.sidebar.caption': 'Caption',
   'editor.brand.selector_placeholder': 'Select a brand...',
   'editor.brand.manual_override': 'Manual Override',
+  'editor.brand.create_apply': 'Create & Apply',
+  'editor.brand.display_name_placeholder': 'Display name',
+  'editor.brand.headline_tagline_placeholder': 'Headline / tagline',
   'editor.image.upload': 'Click to upload',
   'editor.image.drag': ' or drag and drop',
   'editor.image.formats': 'JPG or PNG, max 5MB',
@@ -109,6 +112,9 @@ const en: Translations = {
   'common.untitled': 'Untitled Preview',
   'common.no_caption': 'No caption',
   'common.confirm_delete': 'Delete this preview?',
+  'common.platforms.instagram': 'Instagram',
+  'common.platforms.linkedin': 'LinkedIn',
+  'common.platforms.twitter': 'X / Twitter',
   'mockups.image_placeholder': 'Upload an image to preview',
   'mockups.twitter.show_more': 'Show more',
   'mockups.linkedin.see_more': '...see more',
@@ -124,6 +130,10 @@ const en: Translations = {
   'mockups.instagram.others': 'others',
   'mockups.instagram.comments': 'View all 42 comments',
   'mockups.instagram.time': '2 HOURS AGO',
+  'mockups.default_name': 'Your Name',
+  'mockups.default_username': 'username',
+  'mockups.default_headline': 'Your headline',
+  'mockups.post_time': '2h',
 };
 
 const pt: Translations = {
@@ -204,6 +214,9 @@ const pt: Translations = {
   'editor.sidebar.caption': 'Legenda',
   'editor.brand.selector_placeholder': 'Selecione uma marca...',
   'editor.brand.manual_override': 'Edição Manual',
+  'editor.brand.create_apply': 'Criar e Aplicar',
+  'editor.brand.display_name_placeholder': 'Nome de exibição',
+  'editor.brand.headline_tagline_placeholder': 'Título / tagline',
   'editor.image.upload': 'Clique para upload',
   'editor.image.drag': ' ou arraste e solte',
   'editor.image.formats': 'JPG ou PNG, máx. 5MB',
@@ -228,6 +241,9 @@ const pt: Translations = {
   'common.untitled': 'Preview Sem Título',
   'common.no_caption': 'Sem legenda',
   'common.confirm_delete': 'Excluir este preview?',
+  'common.platforms.instagram': 'Instagram',
+  'common.platforms.linkedin': 'LinkedIn',
+  'common.platforms.twitter': 'X / Twitter',
   'mockups.image_placeholder': 'Faça upload de uma imagem para o preview',
   'mockups.twitter.show_more': 'Mostrar mais',
   'mockups.linkedin.see_more': '...ver mais',
@@ -243,6 +259,10 @@ const pt: Translations = {
   'mockups.instagram.others': 'outros',
   'mockups.instagram.comments': 'Ver todos os 42 comentários',
   'mockups.instagram.time': 'HÁ 2 HORAS',
+  'mockups.default_name': 'Seu Nome',
+  'mockups.default_username': 'usuario',
+  'mockups.default_headline': 'Seu título ou descrição',
+  'mockups.post_time': '2h',
 };
 
 const dictionaries = {

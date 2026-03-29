@@ -27,10 +27,10 @@ export default function LinkedInMockup({ imageUrl, caption, brand }: LinkedInMoc
             {brand.avatarUrl && <img src={brand.avatarUrl} alt="" />}
           </div>
           <div className="li-user-info">
-            <span className="li-name">{brand.displayName || 'Your Name'}</span>
-            <span className="li-headline">{brand.headline || 'Your headline'}</span>
+            <span className="li-name">{brand.displayName || t('mockups.default_name')}</span>
+            <span className="li-headline">{brand.headline || t('mockups.default_headline')}</span>
             <span className="li-meta">
-              2h • <Globe size={12} />
+              {t('mockups.post_time')} • <Globe size={12} />
             </span>
           </div>
         </div>

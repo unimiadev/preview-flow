@@ -33,11 +33,11 @@ export default function TwitterMockup({ imageUrl, caption, brand, isPremium }: T
           {/* Header */}
           <div className="tw-post-header">
             <div className="tw-user-line">
-              <span className="tw-display-name">{brand.displayName || 'Your Name'}</span>
+              <span className="tw-display-name">{brand.displayName || t('mockups.default_name')}</span>
               {isPremium && <BadgeCheck size={16} className="tw-verified" />}
-              <span className="tw-handle">@{brand.username || 'username'}</span>
+              <span className="tw-handle">@{brand.username || t('mockups.default_username')}</span>
               <span className="tw-separator">·</span>
-              <span className="tw-time">2h</span>
+              <span className="tw-time">{t('mockups.post_time')}</span>
             </div>
             <button className="tw-more">
               <MoreHorizontal size={18} />

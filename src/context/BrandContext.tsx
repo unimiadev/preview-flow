@@ -28,6 +28,7 @@ export function BrandProvider({ children }: { children: ReactNode }) {
     }
 
     const fetchBrands = async () => {
+      if (!supabase) return;
       setLoading(true);
       const { data } = await supabase
         .from('brands')
