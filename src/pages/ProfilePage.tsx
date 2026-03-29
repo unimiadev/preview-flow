@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Upload, X, User, Plus, Pencil, Trash2 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
@@ -33,6 +33,14 @@ export default function ProfilePage() {
 
   const avatarInputRef = useRef<HTMLInputElement>(null);
   const brandAvatarInputRef = useRef<HTMLInputElement>(null);
+
+  // Sync with context once loaded
+  useEffect(() => {
+    if (userProfile) {
+      setDisplayName(userProfile.displayName);
+      setAvatarUrl(userProfile.avatarUrl);
+    }
+  }, [userProfile]);
 
   const handleProfileSave = async () => {
     setSaving(true);

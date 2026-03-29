@@ -133,7 +133,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (updates.displayName !== undefined) dbUpdates.display_name = updates.displayName;
     if (updates.avatarUrl !== undefined) dbUpdates.avatar_url = updates.avatarUrl;
 
-    await supabase.from('profiles').update(dbUpdates).eq('id', user.id);
+    const { error } = await supabase.from('profiles').update(dbUpdates).eq('id', user.id);
+    
+    if (error) {
+      console.error('Error updating profile:', error);
+      throw error;
+    }
+
     setUserProfile(prev => prev ? { ...prev, ...updates } : prev);
   };
 
