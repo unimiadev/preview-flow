@@ -1,0 +1,122 @@
+/* ═══════════════════
+   Editor Page
+   ═══════════════════ */
+
+.editor {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Navbar overrides for editor */
+.editor .navbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.navbar-center {
+  display: flex;
+  justify-content: center;
+}
+
+.editor .navbar-actions {
+  justify-content: flex-end;
+}
+
+/* Editor Layout */
+.editor-layout {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.editor-sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  border-right: 1px solid var(--border-subtle);
+  background: var(--bg-surface);
+  padding: var(--space-lg);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.sidebar-label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+/* Preview */
+.editor-preview {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0),
+    var(--bg-base);
+  background-size: 24px 24px;
+  overflow-y: auto;
+  padding: var(--space-xl);
+  position: relative;
+}
+
+.editor-preview::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(108, 92, 231, 0.06) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.preview-wrapper {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .editor-layout {
+    flex-direction: column;
+  }
+
+  .editor-sidebar {
+    width: 100%;
+    min-width: 100%;
+    max-height: 40vh;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .editor .navbar {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .navbar-center {
+    overflow-x: auto;
+  }
+}

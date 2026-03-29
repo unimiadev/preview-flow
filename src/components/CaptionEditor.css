@@ -1,0 +1,66 @@
+/* ═══════════════════
+   Caption Editor
+   ═══════════════════ */
+
+.caption-editor {
+  display: flex;
+  flex-direction: column;
+}
+
+.caption-textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 120px;
+  padding: var(--space-md);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  border-radius: var(--radius-md);
+  background: var(--bg-input);
+  border: 1px solid var(--border-default);
+  color: var(--text-primary);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.caption-textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+  outline: none;
+}
+
+.caption-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.caption-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-sm);
+  padding: 0 var(--space-xs);
+}
+
+.caption-hint {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.caption-hint.warn {
+  color: var(--color-warning);
+}
+
+.caption-count {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  transition: color var(--transition-fast);
+}
+
+.caption-count.warn {
+  color: var(--color-warning);
+}
+
+.caption-count.error {
+  color: var(--color-error);
+}

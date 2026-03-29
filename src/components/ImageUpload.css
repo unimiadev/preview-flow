@@ -1,0 +1,118 @@
+/* ═══════════════════
+   Image Upload
+   ═══════════════════ */
+
+.image-upload-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-xl);
+  border: 2px dashed var(--border-default);
+  border-radius: var(--radius-lg);
+  background: var(--bg-input);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.image-upload-zone:hover,
+.image-upload-zone.dragging {
+  border-color: var(--color-primary);
+  background: rgba(108, 92, 231, 0.05);
+}
+
+.image-upload-zone.dragging {
+  transform: scale(1.01);
+}
+
+.upload-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(108, 92, 231, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--color-primary-light);
+  margin-bottom: var(--space-xs);
+}
+
+.upload-text {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.upload-text span {
+  color: var(--color-primary-light);
+  font-weight: 600;
+}
+
+.upload-hint {
+  font-size: var(--font-size-xs);
+  color: var(--text-muted);
+}
+
+.upload-error {
+  font-size: var(--font-size-xs);
+  color: var(--color-error);
+  margin-top: var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
+  background: rgba(225, 112, 85, 0.1);
+  border-radius: var(--radius-sm);
+}
+
+/* Preview */
+.image-upload-preview {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.image-upload-preview img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.image-remove {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+}
+
+.image-remove:hover {
+  color: var(--color-error);
+}
+
+.image-replace {
+  position: absolute;
+  bottom: var(--space-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-md);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.image-replace:hover {
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--text-primary);
+}

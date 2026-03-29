@@ -1,0 +1,135 @@
+/* ═══════════════════
+   Mockup Phone Frame
+   ═══════════════════ */
+
+.mockup-frame-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* Platform label */
+.mockup-platform-label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.mockup-platform-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* Phone Frame */
+.phone-frame {
+  position: relative;
+  background: #1a1a1f;
+  border-radius: 40px;
+  padding: 12px;
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,0.08),
+    0 20px 60px rgba(0,0,0,0.5),
+    0 0 80px rgba(108, 92, 231, 0.08);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Dynamic Island / Notch */
+.phone-notch {
+  width: 120px;
+  height: 30px;
+  background: #000;
+  border-radius: 20px;
+  margin: 0 auto 6px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Status bar */
+.phone-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.phone-status-time {
+  font-weight: 700;
+}
+
+.phone-status-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.phone-status-bar-icon {
+  width: 16px;
+  height: 10px;
+  background: #fff;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.phone-battery {
+  width: 22px;
+  height: 10px;
+  border: 1.5px solid rgba(255,255,255,0.8);
+  border-radius: 2px;
+  position: relative;
+  opacity: 0.8;
+}
+
+.phone-battery::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #34c759;
+  border-radius: 1px;
+}
+
+.phone-battery::before {
+  content: '';
+  position: absolute;
+  right: -3px;
+  top: 2px;
+  width: 2px;
+  height: 5px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 0 1px 1px 0;
+}
+
+/* Inner screen */
+.phone-screen {
+  background: #fff;
+  border-radius: 28px;
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 660px;
+}
+
+/* Home indicator */
+.phone-home-indicator {
+  width: 135px;
+  height: 5px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 100px;
+  margin: 8px auto 4px;
+}
