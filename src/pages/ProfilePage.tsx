@@ -44,10 +44,16 @@ export default function ProfilePage() {
 
   const handleProfileSave = async () => {
     setSaving(true);
-    await updateProfile({ displayName, avatarUrl });
-    setSaving(false);
-    setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
+    try {
+      await updateProfile({ displayName, avatarUrl });
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2000);
+    } catch (err) {
+      console.error(err);
+      alert('Failed to save profile. Is the Supabase profiles table configured?');
+    } finally {
+      setSaving(false);
+    }
   };
 
   const handleAvatarUpload = (file: File) => {

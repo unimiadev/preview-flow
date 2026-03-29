@@ -133,11 +133,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     if (updates.displayName !== undefined) dbUpdates.display_name = updates.displayName;
     if (updates.avatarUrl !== undefined) dbUpdates.avatar_url = updates.avatarUrl;
 
-    const { error } = await supabase.from('profiles').update(dbUpdates).eq('id', user.id);
+    const { data, error } = await supabase.from('profiles').update(dbUpdates).eq('id', user.id).select();
     
     if (error) {
       console.error('Error updating profile:', error);
       throw error;
+    }
+
+    if (!data || data.length === 0) {
+      console.error('No rows affected. This might be due to missing a profile record or restrictive RLS policies.');
+      throw new Error('Cannot update profile: Record not found or RLS restricted.');
     }
 
     setUserProfile(prev => prev ? { ...prev, ...updates } : prev);
